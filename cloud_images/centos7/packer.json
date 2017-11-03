@@ -15,7 +15,8 @@
     "source_ami": "{{user `source_ami`}}",
     "instance_type": "m4.xlarge",
     "ssh_username": "centos",
-    "ami_name": "dcos-centos7-{{isotime \"200601021504\"}}",
+    "encrypt_boot": true,
+    "ami_name": "dcos-centos-7.4.1708-hvm-{{isotime \"200601021504\"}}",
     "ami_description": "DC/OS Cloud Image for CentOS 7",
     "ami_regions": "{{user `deploy_regions`}}",
     "ebs_optimized": true,
@@ -24,24 +25,28 @@
         "device_name": "/dev/sde",
         "volume_type": "gp2",
         "volume_size": 50,
+        "encrypted": true,
         "delete_on_termination": true
       },
       {
         "device_name": "/dev/sdf",
         "volume_type": "gp2",
         "volume_size": 100,
+        "encrypted": true,
         "delete_on_termination": true
       },
       {
         "device_name": "/dev/sdg",
         "volume_type": "gp2",
-        "volume_size": 50,
+        "volume_size": 250,
+        "encrypted": true,
         "delete_on_termination": true
       },
       {
         "device_name": "/dev/sdh",
         "volume_type": "gp2",
         "volume_size": 20,
+        "encrypted": true,
         "delete_on_termination": true
       }
     ],
@@ -50,33 +55,34 @@
         "device_name": "/dev/sde",
         "volume_type": "gp2",
         "volume_size": 50,
+        "encrypted": true,
         "delete_on_termination": true
       },
       {
         "device_name": "/dev/sdf",
         "volume_type": "gp2",
         "volume_size": 100,
+        "encrypted": true,
         "delete_on_termination": true
       },
       {
         "device_name": "/dev/sdg",
         "volume_type": "gp2",
-        "volume_size": 50,
+        "volume_size": 250,
+        "encrypted": true,
         "delete_on_termination": true
       },
       {
         "device_name": "/dev/sdh",
         "volume_type": "gp2",
         "volume_size": 20,
+        "encrypted": true,
         "delete_on_termination": true
       }
     ],
     "tags": {
       "cloud_builder_version": "{{user `cloud_builder_version`}}"
-    },
-    "ami_groups": [
-      "all"
-    ]
+    }
   }],
   "provisioners": [
     {
