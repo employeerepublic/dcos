@@ -33,8 +33,12 @@ Before=local-fs-pre.target
 Type=oneshot
 ExecStart=/usr/local/sbin/dcos_vol_setup.sh /dev/xvde /var/lib/mesos
 ExecStart=/usr/local/sbin/dcos_vol_setup.sh /dev/xvdf /var/lib/docker
-ExecStart=/usr/local/sbin/dcos_vol_setup.sh /dev/xvdg /dcos/volume0
-ExecStart=/usr/local/sbin/dcos_vol_setup.sh /dev/xvdh /var/log
+ExecStart=/usr/local/sbin/dcos_vol_setup.sh /dev/xvdg /var/log
+ExecStart=/usr/local/sbin/dcos_vol_setup.sh /dev/xvdh /dcos/volume0
+ExecStart=/usr/local/sbin/dcos_vol_setup.sh /dev/xvdi /dcos/volume1
+ExecStart=/usr/local/sbin/dcos_vol_setup.sh /dev/xvdj /dcos/volume2
+ExecStart=/usr/local/sbin/dcos_vol_setup.sh /dev/xvdk /dcos/volume3
+ExecStart=/usr/local/sbin/dcos_vol_setup.sh /dev/xvdl /dcos/volume4
 
 [Install]
 RequiredBy=local-fs-pre.target

@@ -16,7 +16,7 @@
     "instance_type": "m4.xlarge",
     "ssh_username": "centos",
     "encrypt_boot": true,
-    "ami_name": "dcos-centos-7.4.1708-hvm-{{isotime \"200601021504\"}}",
+    "ami_name": "yapster-dcos-centos-7.4.1708-hvm-{{isotime \"200601021504\"}}",
     "ami_description": "DC/OS Cloud Image for CentOS 7",
     "ami_regions": "{{user `deploy_regions`}}",
     "ebs_optimized": true,
@@ -38,14 +38,42 @@
       {
         "device_name": "/dev/sdg",
         "volume_type": "gp2",
-        "volume_size": 250,
+        "volume_size": 20,
         "encrypted": true,
         "delete_on_termination": true
       },
       {
         "device_name": "/dev/sdh",
         "volume_type": "gp2",
-        "volume_size": 20,
+        "volume_size": 100,
+        "encrypted": true,
+        "delete_on_termination": true
+      },
+      {
+        "device_name": "/dev/sdi",
+        "volume_type": "gp2",
+        "volume_size": 100,
+        "encrypted": true,
+        "delete_on_termination": true
+      },
+      {
+        "device_name": "/dev/sdj",
+        "volume_type": "gp2",
+        "volume_size": 100,
+        "encrypted": true,
+        "delete_on_termination": true
+      },
+      {
+        "device_name": "/dev/sdk",
+        "volume_type": "gp2",
+        "volume_size": 100,
+        "encrypted": true,
+        "delete_on_termination": true
+      },
+      {
+        "device_name": "/dev/sdl",
+        "volume_type": "gp2",
+        "volume_size": 250,
         "encrypted": true,
         "delete_on_termination": true
       }
@@ -68,14 +96,42 @@
       {
         "device_name": "/dev/sdg",
         "volume_type": "gp2",
-        "volume_size": 250,
+        "volume_size": 20,
         "encrypted": true,
         "delete_on_termination": true
       },
       {
         "device_name": "/dev/sdh",
         "volume_type": "gp2",
-        "volume_size": 20,
+        "volume_size": 100,
+        "encrypted": true,
+        "delete_on_termination": true
+      },
+      {
+        "device_name": "/dev/sdi",
+        "volume_type": "gp2",
+        "volume_size": 100,
+        "encrypted": true,
+        "delete_on_termination": true
+      },
+      {
+        "device_name": "/dev/sdj",
+        "volume_type": "gp2",
+        "volume_size": 100,
+        "encrypted": true,
+        "delete_on_termination": true
+      },
+      {
+        "device_name": "/dev/sdk",
+        "volume_type": "gp2",
+        "volume_size": 100,
+        "encrypted": true,
+        "delete_on_termination": true
+      },
+      {
+        "device_name": "/dev/sdl",
+        "volume_type": "gp2",
+        "volume_size": 250,
         "encrypted": true,
         "delete_on_termination": true
       }

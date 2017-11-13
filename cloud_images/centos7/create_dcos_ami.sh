@@ -5,7 +5,7 @@ set -o errexit -o nounset -o pipefail
 export AWS_PROFILE=${AWS_PROFILE:-"root"}
 
 # Base CentOS 7 AMI and region
-export SOURCE_AMI=${SOURCE_AMI:-"ami-785cfc01"}
+export SOURCE_AMI=${SOURCE_AMI:-"ami-00983a79"}
 export SOURCE_AMI_REGION=${SOURCE_AMI_REGION:-"eu-west-1"}
 # Version upgraded to in install_prereqs.sh
 export CENTOS_VERSION=${CENTOS_VERSION:-"7.4.1708"}
